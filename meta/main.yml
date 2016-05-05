@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: 'SJLC'
+  description: 'Setup users with ssh logins'
+  license: BSD
+  min_ansible_version: '1.8'
+
+  platforms:
+  - name: GenericLinux
+
+  categories:
+  - system
+  
+dependencies: []
+  
