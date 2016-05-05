@@ -1,0 +1,18 @@
+---
+# tasks file for vctLabs.ssh-logins
+
+- name: add user
+  user:
+    name: "{{item}}"
+    state: present
+  with_items:
+    - "{{ssh_user_keys}}"
+
+- name: manage public keys
+  authorized_key:
+    user: "{{item}}"
+    key: "{{ lookup('file', ssh_lookup_keys + '/' + item + '.pub') }}"
+  with_items:
+    - "{{ssh_user_keys}}"
+
+
