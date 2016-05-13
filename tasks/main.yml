@@ -6,13 +6,13 @@
     name: "{{item}}"
     state: present
   with_items:
-    - "{{ssh_user_keys}}"
+    - "{{ssh_user_names}}"
 
 - name: manage public keys
   authorized_key:
     user: "{{item}}"
     key: "{{ lookup('file', ssh_lookup_keys + '/' + item + '.pub') }}"
   with_items:
-    - "{{ssh_user_keys}}"
+    - "{{ssh_user_names}}"
 
 

@@ -1,7 +1,7 @@
 ---
 # defaults file for vctLabs.ssh-logins
 
-ssh_user_keys: []
+ssh_user_names: []
 
 # lookup path for key files
 ssh_lookup_keys: "{{inventory_dir}}/files/public-keys"
