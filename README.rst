@@ -22,6 +22,14 @@ Role Variables
 
   - optional, leave default if public keys really are located in "files/public-keys"
 
+* ssh_common_groups
+
+  - comma-separated list of groups that all created users should be a member of
+
+  - default value: ""
+
+  - optional, leave default for no common group membership
+
 Dependencies
 ------------
 

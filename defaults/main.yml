@@ -6,3 +6,5 @@ ssh_user_names: []
 # lookup path for key files
 ssh_lookup_keys: "{{inventory_dir}}/files/public-keys"
 
+# comma-separated list of groups that all created users should be a member of
+ssh_common_groups: ""

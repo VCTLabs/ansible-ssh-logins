@@ -1,9 +1,18 @@
 ---
 # tasks file for vctLabs.ssh-logins
 
+- name: create common groups
+  group:
+    name: "{{item}}"
+    state: present
+  with_items:
+    - "{{ssh_common_groups.split(',')}}"
+
 - name: add user
   user:
     name: "{{item}}"
+    groups: "{{ssh_common_groups}}"
+    append: yes
     state: present
   with_items:
     - "{{ssh_user_names}}"
